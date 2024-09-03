@@ -1,0 +1,35 @@
+# Projeto Escola
+
+Este projeto consiste na criação de um banco de dados para gerenciar informações relacionadas a alunos, cursos e notas de uma escola fictícia. O banco de dados armazena dados sobre os alunos matriculados, os cursos oferecidos e as notas que os alunos obtêm em cada curso.
+
+## Estrutura do Banco de Dados
+
+O banco de dados é composto por três tabelas principais:
+
+1. **Alunos**: Armazena informações sobre os alunos da escola.
+    - **id_aluno**: Identificador único do aluno (chave primária, auto incremento).
+    - **nome**: Nome do aluno.
+    - **data_nascimento**: Data de nascimento do aluno.
+    - **endereco**: Endereço do aluno.
+
+2. **Cursos**: Armazena informações sobre os cursos oferecidos pela escola.
+    - **id_curso**: Identificador único do curso (chave primária, auto incremento).
+    - **nome_curso**: Nome do curso.
+    - **descricao**: Descrição do curso.
+
+3. **Notas**: Armazena informações sobre as notas obtidas pelos alunos nos cursos.
+    - **id_nota**: Identificador único da nota (chave primária, auto incremento).
+    - **id_aluno**: Identificador do aluno, referenciando a tabela `Alunos`.
+    - **id_curso**: Identificador do curso, referenciando a tabela `Cursos`.
+    - **nota**: Nota atribuída ao aluno no curso.
+
+## Instruções de Uso
+
+### 1. Criação do Banco de Dados
+
+O script SQL começa com a criação do banco de dados `Escola`:
+
+```sql
+DROP DATABASE IF EXISTS Escola;
+CREATE DATABASE Escola;
+USE Escola;
